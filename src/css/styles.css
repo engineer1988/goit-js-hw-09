@@ -23,3 +23,36 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.index-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 25px;
+  font-size: 50px;
+}
+.index-list-item1 {
+  background-color: aqua;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 250ms ease-in-out;
+}
+.index-list-item2 {
+  background-color: gold;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 250ms ease-in-out;
+}
+.index-row {
+  display: flex;
+  gap: 15px;
+}
+
+.index-list-item1:hover {
+  transform: scale(1.1);
+}
+
+.index-list-item2:hover {
+  transform: scale(1.1);
+}
