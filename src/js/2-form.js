@@ -4,8 +4,8 @@ const textarea = form.elements.message;
 const localStorageKey = 'feedback-form-state';
 
 form.addEventListener('input', () => {
-  const email = form.elements.email.value;
-  const message = form.elements.message.value;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
 
   const arrayForm = {
     email,
@@ -26,6 +26,9 @@ form.addEventListener('submit', e => {
     message,
   };
 
+  if (email === '' || message === '') {
+    return;
+  }
   console.log(arrayForm);
   localStorage.removeItem(localStorageKey);
   form.reset();

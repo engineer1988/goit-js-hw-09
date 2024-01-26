@@ -39,7 +39,7 @@
   transition: transform 250ms ease-in-out;
 }
 .index-list-item2 {
-  background-color: gold;
+  background-color: rgb(241, 121, 102);
   padding: 15px;
   border-radius: 10px;
   transition: transform 250ms ease-in-out;
