@@ -73,8 +73,8 @@ const gallery = document.querySelector('.gallery');
 const markup = images
   .map(
     image => `<li class="gallery-item">
-    <a class="gallery-link" href=${image.original}>
-      <img class="gallery-image" src=${image.preview} alt=${image.description} />
+    <a class="gallery-link" href="${image.original}">
+      <img class="gallery-image" src="${image.preview}" alt="${image.description}" />
     </a>
   </li>`
   )
@@ -88,4 +88,4 @@ const options = {
 };
 
 const lightbox = new SimpleLightbox('.gallery a', options);
-lightbox.on('show.simplelightbox');
+// lightbox.on('show.simplelightbox');

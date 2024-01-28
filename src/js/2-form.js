@@ -36,9 +36,12 @@ form.addEventListener('submit', e => {
 
 function init() {
   const zip = localStorage.getItem(localStorageKey);
-  const data = JSON.parse(zip);
-  form.elements.email.value = data.email;
-  form.elements.message.value = data.message;
+  if (zip) {
+    const data = JSON.parse(zip);
+    if (data) {
+      form.elements.email.value = data.email || '';
+      form.elements.message.value = data.message || '';
+    }
+  }
 }
-
 init();
